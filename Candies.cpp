@@ -33,3 +33,32 @@ long candies(int n, vector<int> arr) {
         result += candy[i];
     }
     return result;
+    
+        
+    int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++) {
+        int arr_item;
+        cin >> arr_item;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        arr[i] = arr_item;
+    }
+
+    long result = candies(n, arr);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
